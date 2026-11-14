@@ -45,7 +45,7 @@
         <header>
           <div class="inner">
             <h2>Projects</h2>
-            Collection of my research, data analysis, and AI projects</p>
+            <p>Collection of my research, data analysis, and AI projects</p>
           </div>
         </header>
 
@@ -89,10 +89,9 @@
             </section>
             <h3 class="major">Data Analysis</h3>
             <p>
-              Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.
-              Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
-              egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus
-              in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+              Exploratory analysis and dashboards built with SQL, Tableau and
+              Power BI on public datasets, turning raw tables into clear
+              business insights.
             </p>
 
             <section class="features">
@@ -139,7 +138,7 @@
                   <b>Tools Used : </b> PowerBI & MySQL
                 </p>
                 <a href="https://github.com/AstreNot/Projects-Sales-Insight-Power-BI-Dashboard" class="special">Learn more</a>
-              </article>>
+              </article>
             </section>
             <h3 class="major">Machine Learning / AI</h3>
             <p>
@@ -162,15 +161,88 @@
                 <a href="#" class="image"
                   ><img src="images/pic05.jpg" alt=""
                 /></a>
-                <h3 class="major">Nisl placerat</h3>
+                <h3 class="major">Product Name Matching</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
-                  nulla dignissim dapibus ultrices.
+                  Maps noisy marketplace listing titles to a canonical product catalogue: rule-based extraction, BM25 and fuzzy similarity combined by rank fusion, with accuracy measured against known ground truth. Built as an exercise on synthetic data.<br>
+                  <b>Tools Used : </b> Python, regex, BM25, fuzzy matching
                 </p>
-                <a href="#" class="special">Learn more</a>
+              </article>
+              <article>
+                <a href="#" class="image"
+                  ><img src="images/pic01.jpg" alt=""
+                /></a>
+                <h3 class="major">Larder: Fridge-to-Meal-Plan App</h3>
+                <p>
+                  Snap a photo of a fridge or pantry to get an inventory, a 7-day meal plan and a shopping list. Object detection runs on a self-hosted YOLOv8 server and a greedy optimizer picks recipes, so it makes no paid LLM calls.<br>
+                  <b>Tools Used : </b> React, Vite, Tailwind, YOLOv8, Supabase
+                </p>
               </article>
             </section>
-            
+
+            <h3 class="major">Applied Analytics &amp; Engineering</h3>
+            <p>
+              Pipelines and applications that move data from a source to a decision-maker: reconciled dashboards and automated reports. The exercises below use synthetic data and fictional companies.
+            </p>
+            <section class="features">
+              <article>
+                <a href="#" class="image"
+                  ><img src="images/Python logo.png" alt=""
+                /></a>
+                <h3 class="major">Commercial Analytics Dashboard</h3>
+                <p>
+                  Tracks sell-in, sell-out and target by channel: extract, DuckDB SQL aggregation, a FastAPI endpoint and a single-page front end, with tests that reconcile the page against the raw rows.<br>
+                  <b>Tools Used : </b> Python, DuckDB, FastAPI, pytest
+                </p>
+              </article>
+              <article>
+                <a href="#" class="image"
+                  ><img src="images/pic02.jpg" alt=""
+                /></a>
+                <h3 class="major">Automated Report Pipeline</h3>
+                <p>
+                  A scheduled data-to-slides pipeline: refresh stage to a JSON cache, then a PowerPoint deck with native charts, orchestrated with Airflow. A guard refuses to fall back to fake data silently.<br>
+                  <b>Tools Used : </b> Python, python-pptx, Airflow, pytest
+                </p>
+              </article>
+            </section>
+
+            <h3 class="major">Optimization &amp; Operations Research</h3>
+            <p>
+              Mathematical optimization for planning problems in manufacturing and supply chains: linear and mixed-integer models solved with open-source solvers.
+            </p>
+            <section class="features">
+              <article>
+                <a href="#" class="image"
+                  ><img src="images/pic03.jpg" alt=""
+                /></a>
+                <h3 class="major">Production Planning under Material Scarcity</h3>
+                <p>
+                  Chooses production quantities to maximize margin when materials are scarce: an LP relaxation, rounding to minimum production quantities, then a recovery pass that spends leftover material.<br>
+                  <b>Tools Used : </b> Python, LP/MILP, HiGHS, SciPy
+                </p>
+              </article>
+              <article>
+                <a href="#" class="image"
+                  ><img src="images/pic04.jpg" alt=""
+                /></a>
+                <h3 class="major">Multi-Year Capacity Planning</h3>
+                <p>
+                  Decides which product groups run on which lines and when to add machines over several years, using monotonic opening variables and a lexicographic objective: fill demand, then open fewest machines, then open them as late as possible.<br>
+                  <b>Tools Used : </b> Python, MILP, HiGHS, SciPy
+                </p>
+              </article>
+              <article>
+                <a href="#" class="image"
+                  ><img src="images/pic05.jpg" alt=""
+                /></a>
+                <h3 class="major">Distribution Network Optimization</h3>
+                <p>
+                  Minimizes the cost of shipping from factories through distribution centres to customers under capacity limits, with a scenario runner that compares demand growth and capacity options.<br>
+                  <b>Tools Used : </b> Python, network flow LP, scenario analysis
+                </p>
+              </article>
+            </section>
+
           </div>
         </div>
       </section>
