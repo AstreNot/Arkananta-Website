@@ -39,25 +39,25 @@ S = "synthetic example"
 PROJECTS = [
     ("Optimization", "Production Planning under Material Scarcity",
      "Whole-batch minimums cost fill rate. The LP bound reaches 67.9%, naive rounding drops to 65.7%, and a recovery pass brings it back to 66.9%.",
-     "Python · LP/MILP · HiGHS", None),
+     "Python · LP/MILP · HiGHS", "https://github.com/AstreNot/production-planning-lp"),
     ("Optimization", "Multi-Year, Two-Site Capacity Planning",
      "Demand grows and a second site opens in year 3. The baseline serves everything with 2 new machines and 1 moved. A harder scenario is proven infeasible instead of hidden.",
-     "Python · MILP · SciPy", None),
+     "Python · MILP · SciPy", "https://github.com/AstreNot/capacity-planning-milp"),
     ("Optimization", "Distribution Network Optimization",
      "+20% demand pushes demand to 2,857 against 2,700 of factory capacity, so service drops from 100% to 94.5%. Larger DCs change nothing, because they can't ship what isn't made.",
-     "Python · network flow · scenarios", None),
+     "Python · network flow · scenarios", "https://github.com/AstreNot/network-optimization"),
     ("Optimization", "FEFO Expiry Planning",
      "With supporting stock tight, 31.4% of the at-risk value is recovered.",
-     "Python · MILP · HiGHS", None),
+     "Python · MILP · HiGHS", "https://github.com/AstreNot/fefo-expiry-planning"),
     ("Applied analytics", "Commercial Analytics Dashboard",
      "Four customers report four different ways. One rule handles each case, and totals match an independent reference within 0.1%.",
-     "Python · DuckDB · FastAPI", None),
+     "Python · DuckDB · FastAPI", "https://github.com/AstreNot/analytics-dashboard"),
     ("Applied analytics", "Automated Report Pipeline",
      "A deck that builds itself and refuses to run on fake data unless told.",
-     "Python · python-pptx · Airflow", None),
+     "Python · python-pptx · Airflow", "https://github.com/AstreNot/report-pipeline"),
     ("Applied analytics", "Product Name Matching",
      "87.3% top-1 accuracy on generated listings with known answers.",
-     "Python · BM25 · fuzzy matching", None),
+     "Python · BM25 · fuzzy matching", "https://github.com/AstreNot/product-matching"),
     ("Research and public case studies", "XRD Image Identification (VGG16)",
      "Classifies materials from X-ray diffractograms with a VGG16-based model.",
      "Python · Keras", "https://github.com/AstreNot/Research-Image-Identification-Model-From-X-Ray-Diffractograms-Based-On-VGG16"),
@@ -268,7 +268,7 @@ h2{font:600 1.1rem 'JetBrains Mono',monospace;margin:0 0 24px;color:var(--fg)}h2
 .svg rect{stroke:var(--card);stroke-width:1}.svg .s0{fill:var(--c1)}.svg .s1{fill:var(--c2)}.svg .rf{stroke:var(--muted);stroke-dasharray:3 3}
 .tools{font:400 .8rem 'JetBrains Mono',monospace;color:var(--fg);margin-top:auto}
 .chip{align-self:flex-start;font:500 .75rem 'JetBrains Mono',monospace;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:2px 10px}
-.card a.go{font:500 .85rem 'JetBrains Mono',monospace}
+.foot{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.card a.go{font:500 .85rem 'JetBrains Mono',monospace;display:inline-block;padding:6px 0}
 ul.more{list-style:none;padding:0;margin:0}.more li{padding:10px 0;border-top:1px solid var(--line)}.more-t{color:var(--muted);font:400 .8rem 'JetBrains Mono',monospace;margin-left:8px}
 footer{border-top:1px solid var(--line);padding:32px 0 56px;color:var(--muted)}footer a{display:inline-block;min-height:44px;padding:12px 8px}
 @media (max-width:640px){.bar{position:static}}
@@ -285,7 +285,7 @@ footer{border-top:1px solid var(--line);padding:32px 0 56px;color:var(--muted)}f
     for g in REAL:
         cards += f'<h3 class="grp">// {e(g)}</h3><div class="grid">'
         for gr, t, b, tools, link in (p for p in PROJECTS if p[0] == g):
-            foot = f'<a class="go" href="{link}">view repo →</a>' if link else f'<span class="chip">{S}</span>'
+            foot = f'<div class="foot"><span class="chip">{S}</span><a class="go" href="{link}">view repo →</a></div>'
             cards += f'<article class="card"><h4>{e(t)}</h4><p>{e(b)}</p>{ch.get(t, "")}<span class="tools">{e(tools)}</span>{foot}</article>'
         cards += "</div>"
     exp = exp_rows(lambda w, r, c, d: f'<div class="entry"><span class="when mono">{w}</span><h3>{e(r)}</h3><p>{e(c)}</p>{f"<p>{e(d)}</p>" if d else ""}</div>')
